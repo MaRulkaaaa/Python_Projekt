@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Strona Główna</a>
+        <a href="{{ url_for('register') }}">Rejestracja</a>
+    </div>
+
+    <div class="container">
+        <h1>Logowanie</h1>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div>
+                <label for="email">Email</label>
+                {{ form.email }}
+            </div>
+            <div>
+                <label for="password">Hasło</label>
+                {{ form.password }}
+            </div>
+            <button type="submit" class="btn">Zaloguj</button>
+        </form>
+
+        <div class="links">
+            <p>Nie masz jeszcze konta? <a href="{{ url_for('register') }}">Zarejestruj się</a>.</p>
+            <p><a href="{{ url_for('index') }}">Powrót na stronę główną</a>.</p>
+        </div>
+    </div>
+
+</body>
+</html>
+
