@@ -72,7 +72,7 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html', form=form)
 
-
+# Tests 
 # Logowanie użytkownika
 @app.route('/login', methods=['GET', 'POST'])
 def login():
